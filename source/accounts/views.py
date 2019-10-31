@@ -5,12 +5,11 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.urls import reverse
-from source.main.settings import HOST_NAME
+from main.settings import HOST_NAME
 from django.views.generic import UpdateView, DetailView, ListView
-from source.accounts.forms import SignUpForm, UserChangeForm, UserChangePasswordForm
 
-
-from source.accounts.models import Token
+from accounts.forms import SignUpForm, UserChangeForm, UserChangePasswordForm
+from accounts.models import Token
 
 
 def login_view(request):
